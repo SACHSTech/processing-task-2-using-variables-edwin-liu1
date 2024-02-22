@@ -9,7 +9,7 @@ public class Sketch extends PApplet {
    */
   public void settings() {
 	// put your size call here
-    size(800, 600);
+    size(900, 600);
     
   if (width >= height)
     {
@@ -33,20 +33,28 @@ public class Sketch extends PApplet {
    * Called repeatedly, anything drawn to the screen goes here
    */
   public void draw() {
+
     // pedals
+    stroke(164, 182, 255, 255);
+    strokeWeight(intScreenSize / 200);
     fill(255);
     ellipse( (width / 2), (height / 2) - (intScreenSize / 7), (intScreenSize) / 5, (intScreenSize) / 4);
     ellipse( (width / 2), (height / 2) + (intScreenSize / 7), (intScreenSize) / 5,(intScreenSize) / 4);
     ellipse( (width / 2) + (intScreenSize / 7), (height / 2), (intScreenSize) / 4, (intScreenSize) / 5);
     ellipse( (width / 2) - (intScreenSize / 7), (height / 2), (intScreenSize) / 4, (intScreenSize) / 5);
-
-    fill(180);
+    
+    // inner-pedals
+    stroke(12, 14, 134, 128);
+    strokeWeight(intScreenSize / 200);
+    fill(194, 85, 211);
     ellipse( (width / 2), (height / 2) - (intScreenSize / 9), (intScreenSize) / 7, (intScreenSize) / 6);
     ellipse( (width / 2), (height / 2) + (intScreenSize / 9), (intScreenSize) / 7,(intScreenSize) / 6);
     ellipse( (width / 2) + (intScreenSize / 9), (height / 2), (intScreenSize) / 6, (intScreenSize) / 7);
     ellipse( (width / 2) - (intScreenSize / 9), (height / 2), (intScreenSize) / 6, (intScreenSize) / 7);
 
     //the center thing
+    stroke(208, 195, 34, 255);
+    strokeWeight(intScreenSize / 100);
     fill(255, 255, 0);
 	  ellipse( (width / 2), (height / 2), (intScreenSize) / 6, (intScreenSize) / 6 );
   }
